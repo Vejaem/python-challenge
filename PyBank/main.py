@@ -42,15 +42,18 @@ print("Average Change: $" + str(format(Avgdiff, ".2f")))
 print("Greatest Increase in Profits: " + str(maxdate) + "($" + str(maxincrease) + ")")
 print("Greatest Decrease in Profits: " + str(mindate) + "($" + str(maxdecrease) + ")")
 
-output_path = os.path.join("Analysis")
 
-f = open("analysis.txt", 'w')
-f.write("Financial Analysis")
-f.write("------------------------")
-f.write = ("Total Months: " + str(totalmonths))
-f.write = ("Total: $" + str(netprofits))
-f.write = ("Average Change: $" + str(format(Avgdiff, ".2f")))
-f.write = ("Greatest Increase in Profits: " + str(maxdate) + "($" + str(maxincrease) + ")")
-f.write = ("Greatest Decrease in Profits: " + str(mindate) + "($" + str(maxdecrease) + ")")
+
+
+output_path = os.path.join("Analysis", "analysis.txt")
+
+f = open(output_path, 'w')
+f.write("Financial Analysis \n")
+f.write("------------------------ \n")
+f.write("Total Months: " + str(totalmonths) + "\n")
+f.write("Total: $" + str(netprofits) + "\n")
+f.write("Average Change: $" + str(format(Avgdiff, ".2f")) + "\n")
+f.write("Greatest Increase in Profits: " + str(maxdate) + "($" + str(maxincrease) + ") \n")
+f.write("Greatest Decrease in Profits: " + str(mindate) + "($" + str(maxdecrease) + ") \n")
 f.close()
 
