@@ -73,3 +73,4 @@ f.write("O'Tooley: " + str(otool_percent_format) + " (" + str(otool_total) + ")\
 f.write("---------------------------\n")
 f.write("Winner: " + str(winner) + "\n")
 f.write("---------------------------\n")
+f.close()
